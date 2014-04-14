@@ -69,7 +69,7 @@ namespace LogicLayer.Services
                     var text = string.Empty;
                     while (!string.IsNullOrEmpty(line))
                     {
-                        text += line + "<br />";
+                        text += line + "\r\n";
                         index++;
                         if (index < lines.Count)
                         {
@@ -94,6 +94,33 @@ namespace LogicLayer.Services
         private List<string> ReadAllLine(string path)
         {
             return File.ReadAllLines(path).ToList();
+        }
+
+        public Message ExportToFile(List<SubtitleModel> subtitles, string path)
+        {
+            if (File.Exists(path))
+            {
+                var message = new Message
+                {
+                    IsSuccess = false,
+                    Content = "Cannot create file"
+                };
+                return message;
+            }
+            using (var sw = File.CreateText(path))
+            {
+                foreach (var subtitle in subtitles)
+                {
+                    sw.WriteLine(subtitle.Id);
+                    sw.WriteLine(subtitle.StartTime.ToString(@"hh\:mm\:ss\,fff") + " --> " + subtitle.EndTime.ToString(@"hh\:mm\:ss\,fff"));
+                    sw.WriteLine(subtitle.Caption);
+                }
+            }
+            return new Message
+            {
+                IsSuccess = true,
+                Content = "File exports successfully"
+            };
         }
     }
 }

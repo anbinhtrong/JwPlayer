@@ -18,6 +18,7 @@ namespace TestSubtitle
             PrintFile(enSubTitle);
             var cnSubTitle = subTitleService.ReadFromFile("cn.srt");
             PrintFile(cnSubTitle);
+            subTitleService.ExportToFile(enSubTitle, "output.srt");
         }
 
         static void PrintFile(List<SubtitleModel> subtitles)

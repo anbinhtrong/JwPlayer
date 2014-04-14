@@ -10,5 +10,6 @@ namespace LogicLayer.Services
     public interface ISubTitleService
     {
         List<SubtitleModel> ReadFromFile(string path);
+        Message ExportToFile(List<SubtitleModel> subtitles, string path);
     }
 }

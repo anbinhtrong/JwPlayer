@@ -1,0 +1,32 @@
+1
+00:00:04,000 --> 00:00:07,990
+Hello! I'm Joe LeBlanc and welcome to Node.js First Look.
+
+2
+00:00:08,000 --> 00:00:12,990
+Node.js makes it possible to write full web applications entirely in JavaScript.
+
+3
+00:00:13,000 --> 00:00:18,990
+In this course, I'll be showing you how to install Node on the Mac, the PC and on Linux,
+
+4
+00:00:19,000 --> 00:00:23,990
+how to run a Node script and use jQuery from the command line, how to use web
+
+5
+00:00:24,000 --> 00:00:25,990
+sockets to create chat rooms.
+
+6
+00:00:26,000 --> 00:00:30,990
+We'll also look at how to find, select and use Node modules, as well as create
+
+7
+00:00:31,000 --> 00:00:32,990
+HTTP servers in Node.
+
+8
+00:00:33,000 --> 00:00:43,000
+So let's get started with Node.js First Look.
+

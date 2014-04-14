@@ -14,8 +14,10 @@ namespace TestSubtitle
         static void Main(string[] args)
         {
             ISubTitleService subTitleService = new SubTitleService();
-            var result = subTitleService.ReadFromFile("en.srt");
-            PrintFile(result);
+            var enSubTitle = subTitleService.ReadFromFile("en.srt");
+            PrintFile(enSubTitle);
+            var cnSubTitle = subTitleService.ReadFromFile("cn.srt");
+            PrintFile(cnSubTitle);
         }
 
         static void PrintFile(List<SubtitleModel> subtitles)

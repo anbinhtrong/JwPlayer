@@ -71,7 +71,14 @@ namespace LogicLayer.Services
                     {
                         text += line + "<br />";
                         index++;
-                        line = lines[index].Trim();
+                        if (index < lines.Count)
+                        {
+                            line = lines[index].Trim();
+                        }
+                        else
+                        {
+                            line = "";
+                        }
                     }
                     subtitle.Caption = text;
                 }
